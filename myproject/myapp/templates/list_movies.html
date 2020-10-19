@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h1>Movies</h1>
+        {%for movie in movies %}
+            <h3>{{movie.title}}</h3>
+            <p>{{movie.synopsis}}</p>
+            <p><strong>Actors</strong></p>
+            <ul>
+                {% for actor in movie.actors.all %}
+                    <p>{{actor.name}}</p>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+
+        <a href="{% url 'add_movie' %}">Add Movie</a>
+    </form>
+    </body>
+</html>

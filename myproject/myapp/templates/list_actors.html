@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h1>Actors</h1>
+        {% for actor in actors %}
+            <p>{{actor.name}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_actor' %}"> Add Actor</a>
+    
+    </body>
+</html>

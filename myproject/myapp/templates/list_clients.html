@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h1>Clients</h1>
+        {% for client in clients %}
+            <p>{{client.name}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_client' %}"> Add Client</a>
+    
+    </body>
+</html>
